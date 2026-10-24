@@ -1,0 +1,12 @@
+# Local database files
+data/*.sqlite
+data/*.sqlite3
+data/*.db
+data/*.db3
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+
+# Operating system files
+.DS_Store
+Thumbs.db
