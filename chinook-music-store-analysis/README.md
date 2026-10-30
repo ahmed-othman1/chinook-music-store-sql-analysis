@@ -5,23 +5,21 @@ A portfolio project of SQLite queries for exploring sales, customers, artists, a
 ## Project contents
 
 - `sql/chinook_music_store_analysis.sql` — standalone analysis script with independent queries.
-- `data/` — place the local Chinook SQLite database here. The database file is excluded from Git.
+- `data/Chinook_Sqlite.sqlite` — sample SQLite database included in this repository.
 
 ## Dataset setup
 
-Download the SQLite database asset, Chinook_Sqlite.sqlite, from the [latest official Chinook release](https://github.com/lerocha/chinook-database/releases). Save it as:
-
-    data/Chinook_Sqlite.sqlite
-
-The database is not included in this repository. Keep the dataset's upstream attribution and license with any copy you distribute.
+The database is included at `data/Chinook_Sqlite.sqlite`; no separate download is needed to run the queries. To obtain the upstream release or a fresh copy, use the [Chinook database releases](https://github.com/lerocha/chinook-database/releases).
 
 ## Run the queries
 
 The script uses SQLite syntax. You can open the database and SQL file in [DB Browser for SQLite](https://sqlitebrowser.org/) and run the statements individually to inspect each result set.
 
-Or run the full script with the SQLite command-line tool:
+Or run the full script with the SQLite command-line tool from this directory:
 
-    sqlite3 -header -column data/Chinook_Sqlite.sqlite ".read sql/chinook_music_store_analysis.sql"
+```sh
+sqlite3 -header -column data/Chinook_Sqlite.sqlite ".read sql/chinook_music_store_analysis.sql"
+```
 
 ## Questions explored
 
@@ -42,9 +40,9 @@ Or run the full script with the SQLite command-line tool:
 
 - Revenue for artists, albums, genres, and tracks is calculated from invoice lines as `UnitPrice * Quantity`. Country revenue uses the invoice `Total`.
 - The monthly revenue query ranks months by revenue and returns the highest-revenue month.
-- The query for artists with the most catalog tracks, total revenue, revenue per track, and playlist count were reconstructed from question headings whose SQL was not fully visible in the supplied screenshots.
+- The query for artists with the most catalog tracks, total revenue, revenue per track, and playlist count were reconstructed from question headings whose SQL was not fully visible in the supplied screenshots. The script marks reconstructed query sections.
 - The project targets the SQLite version of Chinook; it uses SQLite's `strftime` date function and `||` string concatenation.
 
 ## License and attribution
 
-The Chinook sample database is maintained in the [upstream repository](https://github.com/lerocha/chinook-database). Refer to its [license](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md) for dataset attribution and use terms. This project does not redistribute the database file.
+This repository includes the Chinook sample database. It is maintained in the [upstream repository](https://github.com/lerocha/chinook-database); refer to its [license](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md) for dataset attribution and use terms.
