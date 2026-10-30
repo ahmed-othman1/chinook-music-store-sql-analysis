@@ -1,11 +1,11 @@
 # Chinook Music Store SQL Analysis
 
-Portfolio project analyzing sales and catalog data from the Chinook sample music store database with SQLite.
+Portfolio project analyzing sales and catalog data from the Chinook sample music store database with SQL.
 
 ## Main files
 
 - [SQL analysis script](chinook_music_store_analysis.sql) — independent queries for artists, albums, tracks, genres, invoices, customers, and employees.
-- [Project folder](chinook-music-store-analysis/) — includes the SQLite database, organized SQL file, and detailed guide.
+- [Project folder](chinook-music-store-analysis/) — includes the SQL database, organized SQL file, and detailed guide.
 - [Detailed project guide](chinook-music-store-analysis/README.md) — setup, query notes, questions explored, and attribution.
 
 ## Run the queries
@@ -20,4 +20,4 @@ The query file contains independent statements; review their result sets one at 
 
 ## Topics
 
-SQLite · SQL · Data Analysis · Business Questions
+SQL · SQL · Data Analysis · Business Questions
